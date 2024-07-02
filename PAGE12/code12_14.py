@@ -33,11 +33,8 @@ counts=collections.Counter(temp_list)
 tag=counts.most_common(50)
 print(tag)
 
-import matplotlib.font_manager as fm
 #폰트 설정
 font_path = r'D:\nanum-gothic\NanumGothicBold.ttf'
-fontprop = fm.FontProperties(fname=font_path, size=12)
-plt.rcParams['font.family'] = fontprop.get_name()
 
 wc=WordCloud(font_path=font_path, background_color='skyblue', max_font_size=60)
 cloud=wc.generate_from_frequencies(dict(tag))
